@@ -24,11 +24,12 @@ $(document).ready(() => {
           city: city,
           Gender: gender,
           password: password,
+          likedposts: "[]"
         },
         success:(x)=>{
             
             window.location ="index.html";
-            alert(x.firstName+" added successfully");
+            alert("Account created successfully");
         },
         error:(e)=>{
             alert("error occured");

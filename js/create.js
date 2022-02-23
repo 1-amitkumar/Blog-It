@@ -1,26 +1,35 @@
-// javascript for create.html
-const form = document.querySelector('form');
-var obj = JSON.parse(sessionStorage.getItem('user'));
+$(document).ready(() => {
+  var obj = JSON.parse(sessionStorage.getItem('user'));
+  $("#create").submit((event) => {
+    event.preventDefault();
+     
+     var title= $("#title").val();
+     var blogbody= $("#blogbody").val();
+     var category= $("#category").val();
 
-const createPost = async (e) => {
-  e.preventDefault();
+     let data = {
+      title: title,
+      body: blogbody,
+      category: category,
+      datetime: new Date(),
+      userid: obj.id,
+      likes: 0,
+      comments: "[]"
+    }
+    $.ajax({
+      url: "http://localhost:3000/posts",
+      method: "POST",
+      required :"true",
+      data: data,
+      success:(x)=>{
+          window.location ="/pages/blog.html";
+      },
+      error:(e)=>{
+          alert("error occured");
+      }
+    });
 
-  const doc = {
-    title: form.title.value,
-    body: form.body.value,
-    category: form.category.value,
-    datetime: new Date(),
-    userid : obj.id,
-    likes: 0,
-  }
 
-  await fetch('http://localhost:3000/posts', {
-    method: 'POST',
-    body: JSON.stringify(doc),
-    headers: { 'Content-Type': 'application/json' }
-  })
-
-  window.location.replace('/pages/blog.html')
-}
-
-form.addEventListener('submit', createPost);
+  });
+  
+});

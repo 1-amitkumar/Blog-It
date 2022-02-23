@@ -1,28 +1,31 @@
-// javascript for details.html
-const id = new URLSearchParams(window.location.search).get('id');
-const container = document.querySelector('.details');
-const deleteBtn = document.querySelector('.delete');
 
-const renderDetails = async () => {
-  const res = await fetch('http://localhost:3000/posts/' + id);
-  if (!res.ok) {
-    window.location.replace("/");
-  }
-  const post = await res.json();
-
-  const template = `
-    <h1>${post.title}</h1>
-    <p>${post.body}</p>
-  `
-
-  container.innerHTML = template;  
-}
-
-deleteBtn.addEventListener('click', async () => {
-  const res = await fetch('http://localhost:3000/posts/' + id, {
-    method: 'DELETE'
+$(document).ready(() => {
+  const id = new URLSearchParams(window.location.search).get('id');
+  var obj = JSON.parse(sessionStorage.getItem('user'));
+  console.log(obj);
+  $.ajax({
+      url: 'http://localhost:3000/posts/' + id,
+      data: "GET",
+      success: (post) => {
+        console.log(post);
+        const template = `
+        <h1>${post.title}</h1>
+        <p>${post.body}</p><br><br>
+        <h2 id="count">${post.likes} likes</h2>
+      `  
+        $('.details').html(template);
+      },
+      error: (e) => {
+          alert("error: " + e);
+      },
+      complete: () => {
+          console.log("call is completed...");
+      },
   });
-  window.location.replace("/pages/blog.html");
-})
 
-window.addEventListener('DOMContentLoaded', renderDetails);
+  $("#like").click(function(){
+      let val = $("#like").val();
+      $("#count").html(val+1);
+  })
+
+});
