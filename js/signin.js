@@ -19,7 +19,7 @@ $(document).ready(() => {
             });
         },
         error: (e) => {
-          alert("error: " + e);
+          alert("Server error");
         },
         complete: () => {
           console.log("call is completed...");

@@ -1,3 +1,3 @@
-function clear(){
+function clear() {
     sessionStorage.clear();
 }
