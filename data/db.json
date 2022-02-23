@@ -10,7 +10,7 @@
       "Gender": "male",
       "password": "vikas1234",
       "likedposts": "[]",
-      "id": 8
+      "id": 9
     },
     {
       "firstName": "Amitkumar",
@@ -23,6 +23,18 @@
       "password": "amit1234",
       "likedposts": "[]",
       "id": 8
+    },
+    {
+      "firstName": "amol",
+      "lastName": "pawar",
+      "dob": "2022-02-21",
+      "email": "amol@gmail.com",
+      "contact": "9834423158",
+      "city": "KALYAN",
+      "Gender": "male",
+      "password": "amol1234",
+      "likedposts": "[]",
+      "id": 10
     }
   ],
   "posts": [
@@ -31,7 +43,7 @@
       "body": "ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line",
       "category": "World",
       "datetime": "Wed Feb 23 2022 18:13:02 GMT+0530 (India Standard Time)",
-      "userid": "7",
+      "userid": "8",
       "likes": "3",
       "comments": "[]",
       "id": 1
@@ -41,7 +53,7 @@
       "body": "ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line",
       "category": "World",
       "datetime": "Wed Feb 23 2022 18:13:02 GMT+0530 (India Standard Time)",
-      "userid": "7",
+      "userid": "8",
       "likes": "4",
       "comments": "[]",
       "id": 2
@@ -51,10 +63,40 @@
       "body": "ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line",
       "category": "World",
       "datetime": "Wed Feb 23 2022 18:13:02 GMT+0530 (India Standard Time)",
-      "userid": "7",
+      "userid": "8",
       "likes": "5",
       "comments": "[]",
       "id": 3
+    },
+    {
+      "title": "title",
+      "body": "ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line",
+      "category": "Technology",
+      "datetime": "Wed Feb 23 2022 18:13:02 GMT+0530 (India Standard Time)",
+      "userid": "8",
+      "likes": "5",
+      "comments": "[]",
+      "id": 4
+    },
+    {
+      "title": "title",
+      "body": "ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line",
+      "category": "Health",
+      "datetime": "Wed Feb 23 2022 18:13:02 GMT+0530 (India Standard Time)",
+      "userid": "8",
+      "likes": "5",
+      "comments": "[]",
+      "id": 5
+    },
+    {
+      "title": "Create a New Blog",
+      "body": "Create a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New BlogCreate a New Blog",
+      "category": "Other",
+      "datetime": "Wed Feb 23 2022 21:15:20 GMT+0530 (India Standard Time)",
+      "userid": "8",
+      "likes": "0",
+      "comments": "[]",
+      "id": 6
     }
   ]
 }
