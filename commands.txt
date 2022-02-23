@@ -1,0 +1,4 @@
+npm install -g json-server
+
+json-server data/db.json
+

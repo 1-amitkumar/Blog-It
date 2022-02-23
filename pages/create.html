@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <title>BLog It</title>
+</head>
+<body>
+  
+  <h1>Create a New Blog</h1>
+
+  <form>
+    <input type="text" name="title" required placeholder="Blog title">
+    <textarea name="body" required placeholder="Blog body"></textarea>
+    <!-- <input type="text" name="category" placeholder="category"> -->
+
+    <label for="cars">Choose a category</label>
+
+    <select name="Category" id="category">
+      <option value="World">World</option>
+      <option value="Technology">Technology</option>
+      <option value="Science">Science</option>
+      <option value="Style">Style</option>
+      <option value="Politics">Politics</option>
+      <option value="Health">Health</option>
+    </select>
+    <br>
+    <button>Create</button>
+  </form>
+
+  <script src="../js/create.js"></script>
+</body>
+</html>
