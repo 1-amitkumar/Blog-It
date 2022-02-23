@@ -1,39 +1,93 @@
-// javascript for index.html
-const container = document.querySelector('.blogs');
-const searchForm = document.querySelector('.search');
+$("document").ready(function(){
+    
+    getBlogs();
 
-var obj = JSON.parse(sessionStorage.getItem('user'));
+    $('a').click(function(){
+        value=$(this).attr('id');
+        getBlogsCategoryWise(value)
+    });
 
-const renderPosts = async (term) => {
-  let uri = 'http://localhost:3000/posts?_sort=likes&_order=desc';
-  if (term) {
-    uri += `&q=${term}`
-  }
-
-  const res = await fetch(uri);
-  const posts = await res.json();
-   
-  let template = '';
-  posts.forEach(post => {
-    template += `
-      <div class="post">
-        <h2>${post.title}</h2>
-        <p><small>${post.likes} likes</small></p>
-        <p><small>Category: <b>${post.category}</b></small></p>
-        <p><small>Created: ${new Date(post.datetime).toLocaleString()}</b></small></p>
-        <p>${post.body.slice(0, 200)}...</p>
-        <a href="details.html?id=${post.id}">Read more</a>
-      </div>
-    `
-  });
-
-  container.innerHTML = template;
-}
-
-// search
-searchForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  renderPosts(searchForm.term.value.trim());
 })
 
-window.addEventListener('DOMContentLoaded', () => renderPosts());
+function getBlogsCategoryWise(text){
+    axios.get('http://localhost:3000/posts?category='+text)
+      .then((response) => {
+          let blogs = response.data;
+  
+          let template = '';
+          blogs.forEach(post => {
+            template += `
+              <div class="card text-center">
+                <div class="card-header">
+                    <h2><b>${post.title}</b><h2>
+                </div>
+                <div class="card-body">
+                <p>Category: <b>${post.category}</b></p></br>
+                    <p class="card-text">${post.body.slice(0, 400)}...</p>
+                    <a onClick="logInFirst()" class="btn btn-outline-dark">Read more...</a>
+                </div>
+                <div class="card-footer text-muted">
+                ${post.likes} <b>likes</b>
+                </br>
+                <b>Posted on :</b> ${new Date(post.datetime).toLocaleString()} 
+                </div>
+                </div>
+                </br>
+                </br>
+                </br>
+            `
+          });
+
+        $('.categorywise').html(template);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+function getBlogs(){
+    axios.get('http://localhost:3000/posts')
+      .then((response) => {
+          let blogs = response.data;
+          console.log(blogs);
+  
+          let template = '';
+          blogs.forEach(post => {
+              console.log(post);
+            template += `
+              <div class="card text-center">
+                <div class="card-header">
+                    <h2><b>${post.title}</b><h2>
+                </div>
+                <div class="card-body">
+                <p>Category: <b>${post.category}</b></p></br>
+                    <p class="card-text">${post.body.slice(0, 400)}...</p>
+                    <a onClick="logInFirst()"  class="btn btn-outline-dark">Read more...</a>
+                </div>
+                <div class="card-footer text-muted">
+                ${post.likes} <b>likes</b>
+                </br>
+                <b>Posted on :</b> ${new Date(post.datetime).toLocaleString()} 
+                </div>
+                </div>
+                </br>
+                </br>
+                </br>
+            `
+          });
+          
+
+        $('.categorywise').html(template);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  function logInFirst(){
+      alert("login to read complete article")
+  }
+
+
+
+                 

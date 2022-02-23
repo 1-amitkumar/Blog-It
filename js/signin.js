@@ -14,6 +14,8 @@ $(document).ready(() => {
                 sessionStorage.setItem('user', JSON.stringify(element));
                 window.location = "blog.html";
                 }
+                else if(element.email === email && element.password !== password)
+                  alert("wrong password")
             });
         },
         error: (e) => {
